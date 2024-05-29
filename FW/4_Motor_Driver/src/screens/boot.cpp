@@ -18,7 +18,7 @@ BootScreen::BootScreen(SooghGUI& g) : Screen(g)
     lv_obj_set_size(label, LV_PCT(100), 50);
 	lv_obj_center(label);
     lv_obj_set_style_text_align(label, LV_TEXT_ALIGN_CENTER, 0);
-    lv_label_set_text_fmt(label, "ProjectName v%d", VERSION);
+    lv_label_set_text_fmt(label, "4 Motor Driver v%d", VERSION);
 };
 
 void BootScreen::load()

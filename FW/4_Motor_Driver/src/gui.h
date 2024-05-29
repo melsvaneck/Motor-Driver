@@ -11,6 +11,8 @@
 
 class GUI : public SooghGUI
 {
+    public:
+	ScreenPtr	pushScreenType(ScreenType, void* data = nullptr);
 };
 
 #endif // __GUI_H

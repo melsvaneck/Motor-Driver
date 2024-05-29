@@ -22,6 +22,7 @@ class MenuScreen : public Screen
 	
 	private:
 		TreeMenu menu;
+		// SubMenu sub;
 };
 
 #endif // __SCREENS_MAIN_H

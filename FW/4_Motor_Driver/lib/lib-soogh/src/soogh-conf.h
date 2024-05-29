@@ -1,0 +1,13 @@
+#ifndef __SOOGH_CONF_H
+#define __SOOGH_CONF_H
+
+// #define SOOGH_TOUCH
+// #define SOOGH_DOUBLEBUF // NEEDS TESTINGS!
+// #define SOOGH_KEYPAD
+
+// #define BOOTSCREEN_TIMEOUT_MS		5000
+#define DISPLAY_HEIGHT				240
+#define DISPLAY_WIDTH				320
+#define LV_BUF_SIZE					(DISPLAY_HEIGHT*DISPLAY_WIDTH/10)
+
+#endif // __SOOGH_CONF_H

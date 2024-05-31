@@ -51,7 +51,7 @@
 
 // PINS M5Core
 // #define PIN_SCLK				GPIO_NUM_18
-// #define PIN_MOSI				GPIO_NUM_23
+#define PIN_TILT			GPIO_NUM_3
 // #define PIN_MISO				GPIO_NUM_19
 // #define PIN_RXD0          	GPIO_NUM_3
 // #define PIN_TXD0          	GPIO_NUM_1

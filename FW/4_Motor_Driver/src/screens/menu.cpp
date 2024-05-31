@@ -51,6 +51,9 @@ MenuScreen::MenuScreen(SooghGUI& g) : Screen(g)
 	sub4->addSpinbox("speed ", &motorSpeed[3], 0, 10, 0)->onChange([](MenuItem*, void*){ drvs[3]->setDriverSpeed8Bits(motorSpeed[3] * SPEED_MULTIPLIER);});
 	sub4->addSwitch("motor on/off", &motorOn[3])->onChange([](MenuItem*, void*){ drvs[3]->setDriverDirection((hbridge_direction_t)(motorOn[3]));});
 
+	auto sub5 = menu.addSubMenu("Tilt Motor");
+	sub5->addSwitch("motor on/off", &motorOn[4])->onChange([](MenuItem*, void*){digitalWrite(PIN_TILT, motorOn[4]);});
+
 	menu.onClose(menu_close_cb, this);
 	menu.open();
 };

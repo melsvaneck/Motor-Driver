@@ -14,5 +14,5 @@ M5UnitHbridge* drvs[NUMBER_OF_CHANNELS] = {&driver1, &driver2, &driver3, &driver
 float vin_raw[NUMBER_OF_MOTORS] = {0, 0, 0, 0};
 float cin_raw[NUMBER_OF_MOTORS] = {0, 0, 0, 0};
 
-bool motorOn[NUMBER_OF_MOTORS] = {0, 0, 0, 0};
+bool motorOn[5] = {0, 0, 0, 0, 0};
 double motorSpeed[NUMBER_OF_MOTORS] = {5, 5, 5, 5};

@@ -11,12 +11,10 @@
 #include "tools-log.h"
 #include "globals.h"
 
-int num;
-// lv_obj_t *box = nullptr, *lbl_m, *vlt_Label, *_spd_Labl;
+
 lv_style_t 	style_font26;
 
 uint8_t prec;
-// UNIT_HBRIDGE* drvs[0] = driver1;
 
 const char *unit_V, *unit_A;
 
@@ -133,11 +131,13 @@ MotorPanel::MotorPanel(lv_obj_t* parent, const uint8_t num_in, M5UnitHbridge& dr
 
 MainScreen::MainScreen(SooghGUI& g) : Screen(g)
 {
-	_mps[0] = new MotorPanel(_screen, 1, *(drvs[0]));
-	_mps[1] = new MotorPanel(_screen, 2, *(drvs[1]));
-	_mps[2] = new MotorPanel(_screen, 3, *(drvs[2]));
-	_mps[3] = new MotorPanel(_screen, 4, *(drvs[3]));
-	
+	// make screen for each motor
+	for (int i = 0; i < 4; i++)
+	{
+		_mps[i] = new MotorPanel(_screen, 1, *(drvs[i]));
+	}
+
+	// align panels to eachother
 	lv_obj_align_to(_mps[1]->box, _mps[0]->box, LV_ALIGN_OUT_RIGHT_MID, 0, 0);
 	lv_obj_align_to(_mps[2]->box, _mps[0]->box, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);
 	lv_obj_align_to(_mps[3]->box, _mps[1]->box, LV_ALIGN_OUT_BOTTOM_MID, 0, 0);

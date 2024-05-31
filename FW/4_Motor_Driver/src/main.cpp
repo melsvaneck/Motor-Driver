@@ -30,10 +30,19 @@ void setup()
 
     // Init IO
 	digitalWrite(PIN_SPEAKER, LOW);
+	
+
 	pinMode(PIN_SPEAKER, OUTPUT);
+	pinMode(PIN_TILT, OUTPUT);
+
 	pinMode(PIN_BTN_A, INPUT);
 	pinMode(PIN_BTN_B, INPUT);
 	pinMode(PIN_BTN_C, INPUT);
+
+	digitalWrite(PIN_TILT, LOW);
+
+	
+
 
     // Start up GUI
 	gui.begin();
@@ -41,6 +50,7 @@ void setup()
 	// Initialize sensors etc
 	int i2cAdress = 0x20;
 
+	// Initialize i2c of motor drivers 
 	for(int i = 0; i < NUMBER_OF_CHANNELS; i++)
 	{
 		drvs[i]->begin(&Wire, i2cAdress, GPIO_NUM_21, GPIO_NUM_22, 400000L);

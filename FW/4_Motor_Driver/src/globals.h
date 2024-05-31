@@ -10,7 +10,7 @@ extern SettingsManager setman;
 extern GUI gui;
 
 
-extern bool motorOn[NUMBER_OF_MOTORS];
+extern bool motorOn[5];
 extern double motorSpeed[NUMBER_OF_MOTORS];
 
 extern float vin_raw[NUMBER_OF_MOTORS];
